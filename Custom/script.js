@@ -8,11 +8,9 @@
   var givenvalue = givenanswer.value;
   console.log(givenvalue);
     if(finalanswer == givenvalue){
-      sentmsg.innerHTML = "Hey You are correct!"
       correctlist();
       finalanswer = setmul();
     }else{
-      sentmsg.innerHTML = "Hey You are wrong!"
       wronglist();
     }
   };
@@ -28,8 +26,9 @@ function setmul(){
 }
 function correctlist(){
   var val = Math.floor(Math.random() * 4);
+  console.log("correct val is "+val);
   switch (val) {
-    case 1:
+    case 0:
       newmsg = "Nice Yasaswini!";
       break;
     case 2:
@@ -38,7 +37,7 @@ function correctlist(){
     case 3:
       newmsg = "Yasaswini is a good girl!";
       break;
-    case 4:
+    case 1:
       newmsg = "Yasaswini is good at tables!";
       break;
   }
@@ -47,6 +46,7 @@ function correctlist(){
 }
 function wronglist(){
   var val = Math.floor(Math.random() * 4);
+  console.log("wrong val is "+val);
   switch (val) {
     case 1:
       newmsg = "Yasaswini is a bad girl!";
@@ -57,7 +57,7 @@ function wronglist(){
     case 3:
       newmsg = "Wrong Yasaswini!";
       break;
-    case 4:
+    case 0:
       newmsg = "Yasaswini...Learn Tables!";
       break;
   }

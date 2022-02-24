@@ -1,0 +1,47 @@
+.head{
+    background-color: pink;
+    border-radius: 5px;
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#body{
+    background-color: ivory;
+}
+.head-box{
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#question{
+    text-align: center;
+    color: darkblue;
+}
+.label{
+    color: #424242;
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+#answer{
+    background-color: #ebebeb;
+    margin-top: 10px;
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+}
+#submit{
+    margin-top: 15px;
+    width: 30%;
+    color: black;
+    font-size: medium;
+}
+.image{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#msg{
+    text-align: center;
+}

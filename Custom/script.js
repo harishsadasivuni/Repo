@@ -1,10 +1,12 @@
+var countofwrong = 0;
+var countofcorrect = 0;
 (function(){
   var finalanswer = setmul();
   var sentmsg = document.getElementById("msg");
   var submit = document.getElementById("submit");
   var givenanswer = document.getElementById("answer");
   submit.onclick = function(e){
-  e.preventDefault()
+  e.preventDefault();
   var givenvalue = givenanswer.value;
   console.log(givenvalue);
     if(finalanswer == givenvalue){
@@ -42,7 +44,14 @@ function correctlist(){
       break;
   }
   var sentmsg = document.getElementById("msg");
+  var givenanswer = document.getElementById("answer");
+  givenanswer.style.borderColor = "green";
+  givenanswer.style.backgroundColor = "#b6ffc3";
   sentmsg.innerHTML = newmsg;
+  var countercorrect = document.getElementById("cro");
+  countofcorrect++;
+  countercorrect.innerHTML = countofcorrect;
+  givenanswer.value = '';
 }
 function wronglist(){
   var val = Math.floor(Math.random() * 4);
@@ -63,4 +72,10 @@ function wronglist(){
   }
   var sentmsg = document.getElementById("msg");
   sentmsg.innerHTML = newmsg;
+  var givenanswer = document.getElementById("answer");
+  givenanswer.style.borderColor = "red";
+  givenanswer.style.backgroundColor = "#ffe0e0";
+  var counterwrong = document.getElementById("wro");
+  countofwrong++;
+  counterwrong.innerHTML = countofwrong;
 }

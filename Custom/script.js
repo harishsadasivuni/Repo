@@ -17,9 +17,12 @@ var countofcorrect = 0;
     }
   };
 })();
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
 function setmul(){
-  var first = Math.floor(Math.random() * 18);
-  var second = Math.floor(Math.random() * 10);
+  var first = Math.floor( randomIntFromInterval(1, 18)/*Math.random() * 18*/);
+  var second = Math.floor( randomIntFromInterval(1, 10)/*Math.random() * 10*/);
   var finalanswer = first * second;
   var sendnumber = document.getElementById("question");
   var sendstring = "How much is "+first+" x "+second+" ?";

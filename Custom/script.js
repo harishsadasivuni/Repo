@@ -35,7 +35,7 @@ function correctlist(){
   var imagesetter = "";
   switch (val) {
     case 0:
-      newmsg = "Nice Yasaswini!";
+      newmsg = "Great Yasaswini!";
       imagesetter = "success1.png";
       break;
     case 2:

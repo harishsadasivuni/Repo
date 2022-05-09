@@ -33,21 +33,23 @@ function correctlist(){
   var val = Math.floor(Math.random() * 4);
   console.log("correct val is "+val);
   var imagesetter = "";
+  var playernameholder = document.getElementById("playername").value;
+  var playername = (playernameholder != null && playernameholder != "") ?  playernameholder : "Yasaswini";
   switch (val) {
     case 0:
-      newmsg = "Great Yasaswini!";
+      newmsg = "Great "+playername +"!";
       imagesetter = "success1.png";
       break;
     case 2:
-      newmsg = "Good Yasaswini!";
+      newmsg = "Good "+playername+"!";
       imagesetter = "success2.webp";
       break;
     case 3:
-      newmsg = "Yasaswini is a good girl!";
+      newmsg = playername+" is a master at tables!";
       imagesetter = "success3.png";
       break;
     case 1:
-      newmsg = "Yasaswini is good at tables!";
+      newmsg = playername+" is good at tables!";
       imagesetter = "success4.png";
       break;
   }
@@ -66,22 +68,24 @@ function correctlist(){
 function wronglist(){
   var val = Math.floor(Math.random() * 4);
   var imagesetter = "";
+  var playernameholder = document.getElementById("playername").value;
+  var playername = (playernameholder != null && playernameholder != "") ?  playernameholder : "Yasaswini";
   console.log("wrong val is "+val);
   switch (val) {
     case 1:
-      newmsg = "Yasaswini is a bad girl!";
+      newmsg = playername+" is a bad at tables!";
       imagesetter = "failure1.png";
       break;
     case 2:
-      newmsg = "Yasaswini Don't Know Tables!";
+      newmsg = playername+" don't Know Tables!";
       imagesetter = "failure2.png";
       break;
     case 3:
-      newmsg = "Wrong Yasaswini!";
+      newmsg = "Wrong "+playername+"!";
       imagesetter = "failure3.gif";
       break;
     case 0:
-      newmsg = "Yasaswini...Learn Tables!";
+      newmsg = playername+"...Learn Tables!";
       imagesetter = "failure4.gif";
       break;
   }
